@@ -26,9 +26,9 @@ jobs:
         uses: actions/checkout@v6
       
       - name: Set up Go version
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v5
         with:
-          go-version: ${{ needs.get-go-version.outputs.version }}
+          go-version: '1.26'
 
       # Look for a CLI that's made for this PR
       - name: Fetch built CLI
@@ -119,9 +119,9 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Set up Go version
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v5
         with:
-          go-version: ${{ needs.get-go-version.outputs.version }}
+          go-version: '1.26'
 
       # Fetch the pre-built MinIO image from the build job
       - name: Fetch built MinIO Image

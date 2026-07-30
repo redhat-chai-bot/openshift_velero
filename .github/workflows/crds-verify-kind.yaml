@@ -14,9 +14,9 @@ jobs:
       - name: Check out the code
         uses: actions/checkout@v7
       - name: Set up Go
-        uses: actions/setup-go@v7
+        uses: actions/setup-go@v5
         with:
-          go-version-file: 'go.mod'
+          go-version: '1.26'
         id: go
       # Look for a CLI that's made for this PR
       - name: Fetch built CLI
